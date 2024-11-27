@@ -1,0 +1,385 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+.bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+  --background-color: #f9f9f9;
+  width: 375px;
+  height: 88px;
+}
+
+.i {
+  position: absolute;
+  height: 85.71%;
+  width: 100%;
+  top: 9.52%;
+  left: 0%;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.status-bar-on-light {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  right: 0%;
+  left: 0%;
+  height: 44px;
+}
+.icon {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.headline {
+  position: absolute;
+  top: 11px;
+  left: 111px;
+  line-height: 22px;
+}
+.left-action {
+  position: absolute;
+  width: 100%;
+  top: 44px;
+  right: 0%;
+  left: -4%;
+  height: 44px;
+  font-size: 21px;
+  color: #222;
+}
+.navigation-barheadline {
+  position: absolute;
+  top: 0px;
+  left: 650px;
+  width: 375px;
+  height: 109px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 15px;
+  color: #000;
+}
+.head {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.headline1 {
+  position: absolute;
+  top: 113px;
+  left: 665px;
+  width: 150px;
+  height: 19px;
+  font-size: 16px;
+}
+.card-icon {
+  position: absolute;
+  top: 136px;
+  left: 660px;
+  width: 343px;
+  height: 216px;
+}
+.card-2-icon {
+  position: absolute;
+  top: 465px;
+  left: 16px;
+  width: 343px;
+  height: 216px;
+}
+.addinactive-icon {
+  position: absolute;
+  height: 4.43%;
+  width: 9.6%;
+  top: 89.78%;
+  right: 4.27%;
+  bottom: 5.79%;
+  left: 86.13%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.use-as-default {
+  position: absolute;
+  top: 0%;
+  left: 52.38%;
+  letter-spacing: -0.15px;
+  line-height: 150%;
+}
+.checkbox-on-child {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+  border-radius: 4px;
+  background-color: #222;
+}
+.vector-icon {
+  position: absolute;
+  height: 60%;
+  width: 75%;
+  top: 15%;
+  right: 15%;
+  bottom: 25%;
+  left: 10%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.checkbox-on {
+  position: absolute;
+  height: 95.24%;
+  width: 31.75%;
+  top: 4.76%;
+  right: 68.25%;
+  bottom: 0%;
+  left: 0%;
+}
+.checkboxwith-textselected {
+  position: absolute;
+  top: 405px;
+  left: 16px;
+  width: 63px;
+  height: 21px;
+}
+.checkbox-off-child {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+  border-radius: 4px;
+  border: 2px solid #9b9b9b;
+  box-sizing: border-box;
+}
+.checkbox-off {
+  position: absolute;
+  height: 95.24%;
+  width: 31.75%;
+  top: 0%;
+  right: 68.25%;
+  bottom: 4.76%;
+  left: 0%;
+}
+.checkboxwith-textinactive {
+  position: absolute;
+  top: 706px;
+  left: 16px;
+  width: 63px;
+  height: 21px;
+}
+.shade-icon {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.bg1 {
+  position: absolute;
+  top: 240px;
+  left: 0px;
+  box-shadow: 0px -4px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 34px 34px 0px 0px;
+  background-color: #f9f9f9;
+  width: 375px;
+  height: 572px;
+}
+.add-new-card-child {
+  position: absolute;
+  width: 16%;
+  top: 255px;
+  right: 41.87%;
+  left: 42.13%;
+  border-radius: 3px;
+  background-color: #9b9b9b;
+  height: 6px;
+}
+.rectangle {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+  box-shadow: 0px 4px 8px rgba(211, 38, 38, 0.25);
+  border-radius: 25px;
+  background-color: #1a283c;
+  cursor: pointer;
+}
+.add-card {
+  color: white;
+  position: absolute;
+  top: 29.17%;
+  left: 39.65%;
+  line-height: 20px;
+}
+.buttonprimaryinactivebig {
+  position: absolute;
+  top: 715px;
+  left: 16px;
+  width: 343px;
+  height: 48px;
+  text-align: center;
+  color: #000000;
+}
+.text-fieldordinaryfocused-child {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  background-color: #fff;
+}
+.i1 {
+  position: absolute;
+  top: 45.31%;
+  left: 5.83%;
+  line-height: 20px;
+}
+.card-number {
+  position: absolute;
+  top: 20.31%;
+  left: 5.83%;
+  font-size: 11px;
+  color: #9b9b9b;
+}
+.text-fieldordinaryfocused {
+  position: absolute;
+  top: 411px;
+  left: 16px;
+  width: 343px;
+  height: 64px;
+}
+.text-fieldordinaryfocused1 {
+  position: absolute;
+  top: 495px;
+  left: 16px;
+  width: 343px;
+  height: 64px;
+}
+.text-fieldordinaryfocused2 {
+  position: absolute;
+  top: 579px;
+  left: 16px;
+  width: 343px;
+  height: 64px;
+}
+.help-outline-icon {
+  position: absolute;
+  top: 604px;
+  left: 319px;
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  opacity: 0.5;
+}
+.mastercard-icon {
+  position: absolute;
+  top: 434px;
+  left: 307px;
+  width: 32px;
+  height: 25px;
+  overflow: hidden;
+}
+.name-on-card {
+  position: absolute;
+  top: 34.38%;
+  left: 5.83%;
+  line-height: 20px;
+}
+.text-fieldordinaryinactive {
+  position: absolute;
+  top: 327px;
+  left: 16px;
+  width: 343px;
+  height: 64px;
+  color: #000000;
+}
+.headline2 {
+  position: absolute;
+  top: 287px;
+  left: 126px;
+  font-size: 18px;
+  line-height: 22px;
+}
+.checkboxwith-textselected1 {
+  position: absolute;
+  top: 672px;
+  left: 16px;
+  width: 63px;
+  height: 21px;
+}
+.add-new-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 38%;
+}
+.home-indicator-on-light {
+  position: absolute;
+  top: 778px;
+  left: 0px;
+  width: 375px;
+  height: 34px;
+}
+.payment-cards {
+  width: 100%;
+  position: relative;
+  --background-color: #f9f9f9;
+  background-image: url("./images/bg1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 812px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 14px;
+  color: #222;
+  font-family: ABeeZee;
+}
+.input-label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  box-sizing: border-box;
+}

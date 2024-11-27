@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile / My Order</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: ABeeZee, sans-serif;
+        background-image: url("./images/bg1.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .container {
+        width: 375px;
+        height: 705px;
+        position: relative;
+        margin: auto;
+        padding-bottom: 104px; /* Ensures bottom nav is not overlapped */
+      }
+
+      .header {
+        width: 91%;
+        height: 84px;
+        background: #ffffff;
+        box-shadow: 0px 1px 24px rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+        padding: 16px;
+      }
+
+      .header h1 {
+        color: #222222;
+        font-size: 30px;
+        font-style: italic;
+        margin: 0;
+      }
+
+      .order-status {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+
+      .order-status div {
+        background: #222222;
+        color: white;
+        padding: 8px;
+        border-radius: 29px;
+        text-align: center;
+        font-size: 14px; /* Adjusted font size */
+      }
+
+      .order-status .active {
+        background: #ffffff;
+        color: #222222;
+      }
+
+      .order-card {
+        background: white;
+        box-shadow: 0px 1px 24px rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+        margin-top: 20px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #e0e0e0; /* Added border */
+        transition: transform 0.2s; /* Smooth transition effect */
+      }
+
+      .order-card:hover {
+        transform: translateY(-2px); /* Lift effect on hover */
+      }
+
+      .order-card h2 {
+        color: #222222;
+        font-size: 16px;
+        margin: 0;
+      }
+
+      .order-card p {
+        color: #9b9b9b;
+        font-size: 14px;
+        margin: 4px 0; /* Margin for spacing */
+      }
+
+      .order-card .details {
+        text-align: center;
+        color: #222222;
+      }
+
+      .order-card .details-button {
+        background-color: #000000; /* Green background */
+        color: white;
+        padding: 10px;
+        text-align: center;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px; /* Space above button */
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .order-card .details-button:hover {
+        background-color: #228c3a; /* Darker green on hover */
+      }
+
+      .bottom-nav {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: #ffffff;
+        box-shadow: 0px -1px 24px rgba(0, 0, 0, 0.12);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 0;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+
+      .bottom-nav div {
+        text-align: center;
+        color: #222222;
+        font-size: 10px; /* Adjusted font size */
+      }
+
+      .bottom-nav i {
+        color: #9b9b9b;
+        font-size: 24px;
+      }
+
+      .bottom-nav .active i {
+        color: #1a283c;
+      }
+
+      .bottom-nav span {
+        display: block;
+        margin-top: 5px;
+      }
+
+      .bottom-nav .active span {
+        color: #1a283c;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>My Orders</h1>
+        <div class="order-status">
+          <div>Status</div>
+          <div>Processing</div>
+          <div>Cancelled</div>
+        </div>
+      </div>
+
+      <div class="order-card">
+        <h2>Order No1947034</h2>
+        <p class="details">Quantity: <strong>3</strong></p>
+        <p class="details">Tracking number: <strong>IW3475453455</strong></p>
+        <p class="details">Total Amount: <strong>112$</strong></p>
+        <p class="details">Date: <strong>05-12-2019</strong></p>
+        <button class="details-button">Details</button>
+      </div>
+
+      <div class="order-card">
+        <h2>Order No1947035</h2>
+        <p class="details">Quantity: <strong>2</strong></p>
+        <p class="details">Tracking number: <strong>IW3475453456</strong></p>
+        <p class="details">Total Amount: <strong>75$</strong></p>
+        <p class="details">Date: <strong>06-12-2019</strong></p>
+        <button class="details-button">Details</button>
+      </div>
+
+      <div class="bottom-nav">
+        <div class="active">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </div>
+        <div>
+          <i class="fas fa-store"></i>
+          <span>Shop</span>
+        </div>
+        <div>
+          <i class="fas fa-shopping-bag"></i>
+          <span>Bag</span>
+        </div>
+        <div>
+          <i class="fas fa-search"></i>
+          <span>Search</span>
+        </div>
+        <div>
+          <i class="fas fa-user"></i>
+          <span>Profile</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

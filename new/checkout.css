@@ -1,0 +1,436 @@
+body {
+  margin: 0;
+  line-height: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f9f9f9;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* .my-bagcheckout {
+  width: 375px;
+  background-color: #fff;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+} */
+
+/* Keeping your existing styles */
+.bg {
+  width: 375px;
+  height: 88px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* body {
+  margin: 0;
+  line-height: normal;
+}
+.container{
+  width: 375px;
+  background-color: #fff;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 20px;
+}
+.bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+  background-color: #f9f9f9;
+  width: 375px;
+  height: 88px;
+} */
+.battery-icon {
+  position: absolute;
+  height: 25.68%;
+  width: 6.48%;
+  top: 39.39%;
+  right: 3.92%;
+  bottom: 34.92%;
+  left: 89.6%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.wifi-icon {
+  position: relative;
+  width: 15.3px;
+  height: 11px;
+}
+.mobile-signal-icon {
+  position: relative;
+  width: 17px;
+  height: 10.7px;
+}
+.i {
+  position: absolute;
+  height: 85.71%;
+  width: 100%;
+  top: 9.52%;
+  left: 0%;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.time-style {
+  position: absolute;
+  height: 47.73%;
+  width: 14.4%;
+  top: 27.27%;
+  right: 80%;
+  bottom: 25%;
+  left: 5.6%;
+}
+.status-bar-on-light {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  right: 0%;
+  left: 0%;
+  height: 44px;
+}
+.icon {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.headline {
+  position: absolute;
+  top: -5px;
+  left: 149px;
+  line-height: 22px;
+}
+.left-action {
+  position: absolute;
+  width: 100%;
+  top: 44px;
+  right: 0%;
+  left: 0%;
+  height: 44px;
+  font-size: 18px;
+  color: #222;
+}
+.navigation-barheadline {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 375px;
+  height: 109px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 15px;
+  color: #000;
+}
+.head {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.bg1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  box-shadow: 0px 1px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  background-color: #fff;
+  width: 343px;
+  height: 108px;
+}
+.newbridge-court {
+  margin: 0;
+}
+.address1 {
+  position: absolute;
+  top: 45px;
+  left: 28px;
+  letter-spacing: -0.15px;
+  line-height: 150%;
+}
+.name {
+  position: absolute;
+  top: 18px;
+  left: 28px;
+  line-height: 20px;
+}
+.change {
+  position: absolute;
+  top: 18px;
+  left: 268px;
+  line-height: 20px;
+  color: #1a283c;
+  cursor: pointer;
+}
+.address {
+  position: absolute;
+  top: 38px;
+  left: 0px;
+  width: 343px;
+  height: 108px;
+  font-size: 14px;
+}
+.shipping-address {
+  position: absolute;
+  top: 118px;
+  left: 16px;
+  width: 343px;
+  height: 146px;
+  font-size: 16px;
+}
+.head1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 16px;
+}
+.card-number {
+  position: absolute;
+  top: 44px;
+  left: 81px;
+  letter-spacing: -0.15px;
+  line-height: 150%;
+}
+.change1 {
+  position: absolute;
+  top: 0px;
+  left: 268px;
+  line-height: 20px;
+  color: #1a283c;
+}
+.card-icon {
+  position: absolute;
+  top: 34px;
+  left: 0px;
+  width: 64px;
+  height: 38px;
+}
+.payment {
+  position: absolute;
+  top: 320px;
+  left: 16px;
+  width: 316px;
+  height: 72px;
+  cursor: pointer;
+}
+.head2 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 16px;
+  color: #222;
+}
+.bg2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+  box-shadow: 0px 1px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  background-color: #fff;
+}
+.dhl-icon {
+  position: absolute;
+  top: 18px;
+  left: 15px;
+  width: 71px;
+  height: 16px;
+  overflow: hidden;
+}
+.days {
+  position: absolute;
+  top: 44px;
+  left: 26px;
+}
+.dhl {
+  position: absolute;
+  height: 65.45%;
+  width: 29.15%;
+  top: 34.55%;
+  right: 0%;
+  bottom: 0%;
+  left: 70.85%;
+}
+.bg3 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  box-shadow: 0px 1px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  background-color: #fff;
+  width: 100px;
+  height: 72px;
+}
+.fedex-icon {
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  width: 61px;
+  height: 17px;
+  overflow: hidden;
+}
+.fedex {
+  position: absolute;
+  top: 38px;
+  left: 0px;
+  width: 100px;
+  height: 72px;
+}
+.usps-icon {
+  position: absolute;
+  top: 24px;
+  left: 9px;
+  width: 82px;
+  height: 10.3px;
+  overflow: hidden;
+}
+.usps {
+  position: absolute;
+  top: 38px;
+  left: 122px;
+  width: 100px;
+  height: 72px;
+}
+.delivery-method {
+  position: absolute;
+  top: 442px;
+  left: 16px;
+  width: 343px;
+  height: 110px;
+  font-size: 11px;
+  color: #9b9b9b;
+}
+.order {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  line-height: 20px;
+}
+.price {
+  position: absolute;
+  top: 5%;
+  left: 88.53%;
+  font-size: 16px;
+  color: #222;
+  text-align: right;
+}
+.order-sum {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 340px;
+  height: 20px;
+}
+.price1 {
+  position: absolute;
+  top: 5%;
+  left: 91.45%;
+  font-size: 16px;
+  color: #222;
+  text-align: right;
+}
+.delivery-sum {
+  position: absolute;
+  top: 34px;
+  left: 1px;
+  width: 339px;
+  height: 20px;
+}
+.summary1 {
+  position: absolute;
+  top: 2px;
+  left: 0px;
+}
+.price2 {
+  position: absolute;
+  top: 0%;
+  left: 87.02%;
+  font-size: 18px;
+  line-height: 22px;
+  color: #222;
+  text-align: right;
+}
+.summary {
+  position: absolute;
+  top: 68px;
+  left: 0px;
+  width: 339px;
+  height: 22px;
+  font-size: 16px;
+}
+.sums {
+  position: absolute;
+  top: 604px;
+  left: 16px;
+  width: 340px;
+  height: 90px;
+  color: #9b9b9b;
+}
+.rectangle {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+  box-shadow: 0px 4px 8px rgba(211, 38, 38, 0.25);
+  border-radius: 25px;
+  background-color: #1a283c;
+}
+.submit-order {
+  position: absolute;
+  top: 29.17%;
+  left: 35.28%;
+  line-height: 20px;
+}
+.buttonprimaryinactivebig {
+  position: absolute;
+  top: 717px;
+  left: 16px;
+  width: 343px;
+  height: 48px;
+  cursor: pointer;
+  text-align: center;
+  color: #fff;
+}
+.home-indicator-on-light {
+  position: absolute;
+  top: 778px;
+  left: 0px;
+  width: 375px;
+  height: 34px;
+}
+.my-bagcheckout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 410px;
+  position: relative;
+  background-color: #f9f9f9;
+  height: 812px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 14px;
+  color: #222;
+  font-family: ABeeZee;
+}

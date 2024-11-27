@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>Coffee</title>
+    <link rel="stylesheet" href="./productcoffee.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ABeeZee:ital,wght@0,400;1,400&display=swap" />
+</head>
+<body>
+    <div class="coffee">Coffee</div>
+    <div class="center-container">
+        <div class="product-card" data-product-id="672bc64619505e01a8e6e3b7"> <!-- Add your unique product ID here -->
+            <img class="image-icon" alt="" src="./images/coffee.png" />
+
+            <i class="tide">Nescafe CLASICO </i>
+            <i class="you-can-also">You can also like this</i>
+            <i class="i">Rs500</i>
+
+            <div class="tide-ultra-oxi">
+                NESCAFÉ Classic signature blend is made from Arabica and Robusta coffee beans.
+                Our unique process locks in the strength of every coffee bean's flavour and 
+                aroma to preserve our coffee's signature aroma and taste. Nescafé Classic instant
+                coffee is made from the best coffee beans that are 100 % natural,
+                using only pure water to seal in the richer aroma and fuller flavour.
+                Real coffee. Real experiences. Know your NESCAFÉ®.
+            </div>
+            <div class="shipping-info">Shipping info</div>
+            <div class="support">Support</div>
+            <div class="item-details">Item details</div>
+            <div class="line"></div>
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+
+            <div class="product-cardsalemain" id="productCardSaleMainContainer">
+                <button onclick="window.location.href='productcardshampo.html'"><img class="photo-icon" alt="" src="./images/shampoo.png" /></button>
+                <i class="item">TRESemme</i>
+            </div>
+            <div class="product-cardnewmain">
+                <button onclick="window.location.href='productenergy.html'"><img class="photo-icon" alt="" src="./images/energy.png" /></button>
+                <i class="item">Monster Energy</i>
+            </div>
+
+            <i class="item"> </i>
+        </div>
+        <div class="group">
+            <div class="button-container">
+                <button onclick="addToCart()" class="add-to-cart">ADD TO CART</button>
+                <button class="ar-navigation">AR NAVIGATION</button>
+            </div>
+        </div>
+
+        <script>
+            async function addToCart(quantity = 1) {
+                const productCard = document.querySelector('.product-card');
+                const productId = productCard.getAttribute('data-product-id'); // Get the product ID from the data attribute
+                const access_token = localStorage.getItem('token'); // Assuming you store the JWT token in local storage
+
+                // Check if the access token exists
+                if (!access_token) {
+                    alert('You need to log in first.'); // Alert the user if no token is found
+                    return; // Exit the function if no token is found
+                }
+
+                const response = await fetch('http://localhost:5000/cart/cart', { // Sending data to backend
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${access_token}`
+                    },
+                    body: JSON.stringify({
+                        item_id: '672bc64619505e01a8e6e3b7', // Use the product ID here
+                        quantity: quantity
+                    })
+                });
+
+                if (response.ok) {
+                    alert('Item added to cart successfully!');
+                    window.location.href = 'mybag.html'; // Redirect to "my bag" page
+                } else {
+                    const errorData = await response.json();
+                    alert(`Error: ${errorData.msg}`);
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

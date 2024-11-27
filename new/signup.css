@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ABeeZee', sans-serif;
+}
+
+body {
+    background-color: #F9F9F9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(./images/bg1.png);
+    background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+}
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+.container {
+    width: 375px;
+    background-color: #F9F9F9;
+    position: relative;
+}
+
+.header {
+    position: relative;
+    padding: 20px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-family: 'Adamina', serif;
+    font-size: 25px;
+    color: #222222;
+}
+
+
+
+.logo {
+    width: 50px;
+    height: 39px;
+}
+
+.form {
+    padding: 0 16px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 11px;
+    color: #9B9B9B;
+    margin-bottom: 5px;
+}
+
+.input {
+    width: 100%;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    border: none;
+    font-size: 14px;
+    color: #2D2D2D;
+}
+
+.checkmark {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 19px;
+    height: 16px;
+    background-color: #2AA952;
+}
+
+.signup-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #1A283C;
+    color: #fff;
+    font-size: 14px;
+    font-style: italic;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.existing-account {
+    text-align: right;
+    font-size: 14px;
+    color: #222;
+    font-style: italic;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.existing-account .arrow {
+    width: 16px;
+    height: 6px;
+    background-color: #1A283C;
+    margin-left: 5px;
+}
+
+.social-signup {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.social-signup span {
+    font-size: 14px;
+    color: #222;
+    font-style: italic;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.icon {
+    width: 92px;
+    height: 64px;
+    background-color: #fff;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 24px;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.google {
+    background-image: url('./images/a.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 111px 90px;
+}
+
+
+
+
+.facebook {
+
+    background-image: url('./images/facebook.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 111px 90px;
+    
+}

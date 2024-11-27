@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <style>
+        /* Set the body to use the full viewport height and center everything */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(152, 230, 232);
+            overflow: hidden; /* Prevents scrolling */
+            
+        }
+
+        .container {
+            width: 100%; /* Full width container */
+            height: 100%; /* Full height container */
+            max-width: 375px; /* Keeps the design within a mobile-like viewport */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .success-btn {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 20px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .success-btn img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .message {
+            color: black;
+            font-size: 34px;
+            font-family: 'ABeeZee', sans-serif;
+            font-style: italic;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .sub-message {
+            text-align: center;
+            color: black;
+            font-size: 14px;
+            font-family: 'ABeeZee', sans-serif;
+            font-weight: 400;
+            line-height: 21px;
+            margin-top: 20px;
+        }
+
+        .continue-btn {
+            width: 343px;
+            height: 48px;
+            background: #1A283C;
+            box-shadow: 0px 4px 8px rgba(211, 37, 37, 0.25);
+            border-radius: 25px;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+            font-family: 'ABeeZee', sans-serif;
+            font-style: italic;
+            font-weight: 400;
+            line-height: 48px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message">Success!</div>
+        <div class="sub-message">Thank you for choosing AR Evolution</div>
+        <div class="social-icons">
+            <button class="success-btn">
+                <img src="./images/successs.png" alt="success">
+            </button>
+        </div>
+        <a href="mainpage.html"><div class="continue-btn">CONTINUE SHOPPING</div></a>
+    </div>
+</body>
+</html>

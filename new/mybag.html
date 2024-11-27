@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>My Bag</title>
+    <link rel="stylesheet" href="./mybag.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="my-bag">
+        <div class="navigation-barbig-headline">
+            <i class="headline">My Bag</i>
+        </div>
+        <div class="product-cards"></div> <!-- This will be populated with cart items -->
+        <div class="price">
+            <i class="total-amount">Total amount:</i>
+            <i class="price1" id="total-price">Rs0</i>
+        </div>
+        <div class="buttonprimaryinactivebig" id="buttonPrimaryInactiveBigContainer">
+            <a href="checkout.html"><div class="rectangle"></div></a>
+<button onclick="window.location.href='paymentcards.html'">
+            <i class="check-out">CHECK OUT</i>
+</button>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <div>
+            <button onclick="window.location.href='mainpage.html'"><i class="fas fa-home"></i></button>
+            <span>Home</span>
+        </div>
+        <div>
+            <button onclick="window.location.href='main2.html'"><i class="fas fa-store"></i></button>
+            <span>Shop</span>
+        </div>
+        <div class="active">
+            <button onclick="window.location.href='mybag.html'"><i class="fas fa-shopping-bag"></i></button>
+            <span>Bag</span>
+        </div>
+        <div>
+            <button onclick="window.location.href='categories.html'"><i class="fas fa-search"></i></button>
+            <span>Search</span>
+        </div>
+        <div>
+            <button onclick="window.location.href='myprofile.html'"><i class="fas fa-user"></i></button>
+            <span>Profile</span>
+        </div>
+    </div>
+
+    <script>
+        async function fetchCartItems() {
+            const access_token = localStorage.getItem('token'); // Assuming you store the JWT token in local storage
+            if (!access_token) {
+                alert("Please log in again.");
+                return; // Exit the function if no token is found
+            }
+
+            const response = await fetch('http://localhost:5000/cart/cart', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${access_token}`
+                }
+            });
+
+            if (response.ok) {
+                const cartItems = await response.json();
+                console.log('Fetched cart items:', cartItems); // Log the fetched cart items
+                displayCartItems(cartItems);
+            } else {
+                alert('Failed to fetch cart items');
+            }
+        }
+
+        function displayCartItems(cartItems) {
+            const productCardsContainer = document.querySelector('.product-cards');
+            productCardsContainer.innerHTML = ''; // Clear existing items
+            let totalPrice = 0;
+
+            // Check if there are any items in the cart
+            if (!cartItems || cartItems.length === 0) {
+                productCardsContainer.innerHTML = '<div class="empty-cart">Your cart is empty.</div>';
+                return; // Exit if there are no items
+            }
+
+            cartItems.forEach(item => {
+                // Log each item to see its structure
+                console.log('Cart item:', item);
+
+                const productCard = document.createElement('div');
+                productCard.className = 'product-cardbag';
+                productCard.innerHTML = `
+                    <h3 class="product-name">${item.product_name}</h3> <!-- Display product name -->
+                    <i class="price2">Rs${item.price}</i> <!-- Display product price -->
+                    <div class="number-of-items">
+                        <div class="quantity-controls">
+                            <button class="icon2" onclick="increaseQuantity(${item.product_id})">+</button>
+                            <span class="i1">${item.quantity}</span> <!-- Display quantity -->
+                            <button class="icon2" onclick="decreaseQuantity(${item.product_id})">-</button>
+                        </div>
+                    </div>
+                `;
+                productCardsContainer.appendChild(productCard);
+                totalPrice += item.price * item.quantity; // Calculate total price
+            });
+
+            document.getElementById('total-price').innerText = `Rs${totalPrice}`; // Update total price
+        }
+
+        // Call the function to fetch cart items when the page loads
+        window.onload = fetchCartItems;
+
+        function increaseQuantity(productId) {
+            // Logic to increase quantity
+            console.log(`Increasing quantity for product ID: ${productId}`);
+            // Implement the increase quantity functionality here
+        }
+
+        function decreaseQuantity(productId) {
+            // Logic to decrease quantity
+            console.log(`Decreasing quantity for product ID: ${productId}`);
+            // Implement the decrease quantity functionality here
+        }
+    </script>
+</body>
+</html>

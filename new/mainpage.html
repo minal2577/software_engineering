@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>mainpage</title>
+    <link rel="stylesheet" href="./mainpage.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=ABeeZee:ital,wght@0,400;1,400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="main-page">
+      <img class="big-banner-icon" alt="" src="./images/home.png" />
+
+      <div
+        class="buttonprimaryinactivesmall"
+        data-scroll-to="buttonPrimaryInactiveSmallContainer"
+      >
+        <button  onclick="window.location.href='main2.html'"><div class="rectangle"></div></button>
+        <i class="check">Check</i>
+      </div>
+      <div class="blocknew">
+        <i class="title">New</i>
+        <div class="subtitle">You’ve never seen it before!</div>
+        <div class="product-card-new">
+          <button onclick="window.location.href='productcardshampo.html'"><img class="photo-icon" alt="" src="./images/shampoo.png" /></button>
+
+          <div class="new-label">
+            <div class="bg"></div>
+            <i class="new">NEW</i>
+          </div>
+          <div class="rating-no-points">
+            <img class="starinactive-icon5" alt="" src="images/rating_star.png" />
+          </div>
+
+          <i class="new-price">Rs400</i>
+          <i class="item">TRESemme Keratin</i>
+          <div class="brand-name">Shampoo</div>
+        </div>
+        <div class="product-cardnewmain">
+          <button onclick="window.location.href='productcoffee.html'"><img class="photo-icon1" alt="" src="./images/coffee.png " /></button>
+
+          <div class="new-label">
+            <div class="bg"></div>
+            <i class="new">NEW</i>
+          </div>
+          <div class="rating-no-points1">
+            <img class="starinactive-icon5" alt="" src="images/rating_star.png" />
+          </div>
+
+          <i class="new-price">Rs500</i>
+          <i class="item1">Nescafe CLASICO</i>
+          <div class="brand-name1">Coffee</div>
+        </div>
+        <div class="product-cardnewmain1">
+          <button onclick="window.location.href='productenergy.html'"><img class="photo-icon1" alt="" src="./images/energy.png" /></button>
+
+          <div class="new-label">
+            <div class="bg"></div>
+            <i class="new">NEW</i>
+          </div>
+          <div class="rating-no-points1">
+            <img class="starinactive-icon5" alt="" src="images/rating_star.png" />
+          </div>
+
+          <i class="new-price">Rs350</i>
+          <i class="item1">Monster Energy</i>
+          <div class="brand-name1">Energy Drink</div>
+        </div>
+      </div>
+
+      <i class="home-kitchen-container">
+        <p class="home">HOME &</p>
+        <p class="home">KITCHEN</p>
+      </i>
+      <div class="bottom-nav">
+        <div onclick="window.location.href='mainpage.html'" class="active">
+          <button><i class="fas fa-home"></i></button>
+          <span>Home</span>
+        </div>
+        <div>
+          <button onclick="window.location.href='main2.html'">
+            <i class="fas fa-store"></i>
+          </button>
+          <span>Shop</span>
+        </div>
+        <div>
+          <button onclick="window.location.href='mybag.html'">
+            <i class="fas fa-shopping-bag"></i>
+          </button>
+          <span>Bag</span>
+        </div>
+        <div>
+          <button onclick="window.location.href='categories.html'">
+            <i class="fas fa-search"></i>
+          </button>
+          <span>Search</span>
+        </div>
+        <div>
+          <button onclick="window.location.href='myprofile.html'">
+            <i class="fas fa-user"></i>
+          </button>
+          <span>Profile</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var tab5MyProfile = document.getElementById("tab5MyProfile");
+      if (tab5MyProfile) {
+        tab5MyProfile.addEventListener("click", function (e) {
+          // Add your code here
+        });
+      }
+
+      var tab3Bag = document.getElementById("tab3Bag");
+      if (tab3Bag) {
+        tab3Bag.addEventListener("click", function (e) {
+          // Add your code here
+        });
+      }
+
+      var tab2Shop = document.getElementById("tab2Shop");
+      if (tab2Shop) {
+        tab2Shop.addEventListener("click", function (e) {
+          // Add your code here
+        });
+      }
+
+      var tab1Main = document.getElementById("tab1Main");
+      if (tab1Main) {
+        tab1Main.addEventListener("click", function () {
+          var anchor = document.querySelector(
+            "[data-scroll-to='buttonPrimaryInactiveSmallContainer']"
+          );
+          if (anchor) {
+            anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+          }
+        });
+      }
+
+      var vectorIcon = document.getElementById("vectorIcon");
+      if (vectorIcon) {
+        vectorIcon.addEventListener("click", function (e) {});
+      }
+    </script>
+  </body>
+</html>

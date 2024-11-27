@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Shipping Address</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "ABeeZee", sans-serif;
+            background-image: url("./images/shippingbg.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            background: #f9f9f9;
+            width: 375px;
+            height: 680px;
+            box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            padding-top: 100px;
+        }
+
+        .header {
+            font-size: 30px;
+            color: #222;
+            text-align: center;
+            margin-bottom: 32px;
+            font-style: italic;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .form-group {
+            background: white;
+            box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.05);
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        .form-group label {
+            font-size: 11px;
+            color: #9b9b9b;
+        }
+
+        .form-group input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            padding: 5px;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        button {
+            width: 100%;
+            height: 48px;
+            background: #1a283c;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Adding Shipping Address</div>
+
+        <form id="shippingForm">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input
+                    type="text"
+                    id="fullname"
+                    name="fullname"
+                    placeholder="Enter Full Name"
+                    required
+                    minlength="3"
+                />
+                <div class="error" id="nameError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    placeholder="Enter Full Address"
+                    required
+                    minlength="10"
+                />
+                <div class="error" id="addressError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="city">City</label>
+                <input
+                    type="text"
+                    id="city"
+                    name="city"
+                    placeholder="Enter your City"
+                    required
+                />
+                <div class="error" id="cityError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="state">State/Province/Region</label>
+                <input
+                    type="text"
+ id="state"
+                    name="state"
+                    placeholder="Enter your State"
+                    required
+                />
+                <div class="error" id="stateError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="zipCode">Zip Code (Postal Code)</label>
+                <input
+                    type="text"
+                    id="zipCode"
+                    name="zipCode"
+                    placeholder="Enter PIN Code"
+                    required
+                    pattern="[0-9]{5,6}"
+                    title="Zip Code should be 5 or 6 digits"
+                />
+                <div class="error" id="zipError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country</label>
+                <input
+                    type="text"
+                    id="country"
+                    name="country"
+                    placeholder="Enter your Country"
+                    required
+                />
+                <div class="error" id="countryError"></div>
+            </div>
+
+            <button type="submit">SAVE ADDRESS</button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById("shippingForm");
+        const nameInput = document.getElementById("fullname");
+        const addressInput = document.getElementById("address");
+        const cityInput = document.getElementById("city");
+        const stateInput = document.getElementById("state");
+        const zipCodeInput = document.getElementById("zipCode");
+        const countryInput = document.getElementById("country");
+
+        form.addEventListener("submit", async function (event) {
+            event.preventDefault(); // Prevent default form submission
+            let valid = true;
+
+            // Full Name validation
+            if (nameInput.value.trim().length < 3) {
+                document.getElementById("nameError").textContent =
+                    "Full Name must be at least 3 characters.";
+                valid = false;
+            } else {
+                document.getElementById("nameError").textContent = "";
+            }
+
+            // Address validation
+            if (addressInput.value.trim().length < 10) {
+                document.getElementById("addressError").textContent =
+                    "Address must be at least 10 characters.";
+                valid = false;
+            } else {
+                document.getElementById("addressError").textContent = "";
+            }
+
+            // City validation
+            if (cityInput.value.trim() === "") {
+                document.getElementById("cityError").textContent =
+                    "City is required.";
+                valid = false;
+            } else {
+                document.getElementById("cityError").textContent = "";
+            }
+
+            // State validation
+            if (stateInput.value.trim() === "") {
+                document.getElementById("stateError").textContent =
+                    "State is required.";
+                valid = false;
+            } else {
+                document.getElementById("stateError").textContent = "";
+            }
+
+            // Zip Code validation
+            const zipCodePattern = /^[0-9]{5,6}$/;
+            if (!zipCodePattern.test(zipCodeInput.value.trim())) {
+                document.getElementById("zipError").textContent =
+                    "Enter a valid 5 or 6 digit Zip Code.";
+                valid = false;
+            } else {
+                document.getElementById("zipError").textContent = "";
+            }
+
+            // Country validation
+            if (countryInput.value.trim() === "") {
+                document.getElementById("countryError").textContent =
+                    "Country is required.";
+                valid = false;
+            } else {
+                document.getElementById("countryError").textContent = "";
+            }
+
+            if (valid) {
+                // If the form is valid, send the data to the backend
+                const addressData = {
+                fullname: nameInput.value.trim(),
+                address: addressInput.value.trim(), // Send as a separate field
+                city: cityInput.value.trim(),
+                state: stateInput.value.trim(),
+                zipCode: zipCodeInput.value.trim(),
+                country: countryInput.value.trim()
+            };
+
+                try {
+
+ const accessToken = localStorage.getItem('token');
+    
+    // Check if the access token exists
+    if (!accessToken) {
+        alert('You need to log in first.'); // Alert the user if no token is found
+        return; // Exit the function if no token is found
+    }
+
+                    const response = await fetch('http://localhost:5000/shipping/address', { //send data to backend
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${accessToken}`
+                        },
+                        body: JSON.stringify(addressData),
+                    });
+
+                    if (!response.ok) {
+                        const errorData = await response.json();
+                        alert(`Error: ${errorData.msg}`);
+                    } else {
+                        alert('Address saved successfully!');
+                        form.reset(); // Reset the form fields after successful submission
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('An error occurred while saving the address.');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

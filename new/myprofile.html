@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0;
+        background-image: url("./images/bg1.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .container {
+        width: 375px;
+        height: 812px;
+        background: #f9f9f9;
+        position: relative;
+        border-radius: 12px;
+      }
+
+      .header {
+        width: 100%;
+        height: 140px;
+        padding: 30px 14px;
+        font-family: ABeeZee, sans-serif;
+        font-size: 29px;
+        color: #222222;
+        font-style: italic;
+      }
+
+      .profile-section {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .profile-image {
+        width: 64px;
+        height: 64px;
+        background-color: #c4c4c4;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+
+      .profile-info {
+        font-family: ABeeZee, sans-serif;
+      }
+
+      .profile-info h2 {
+        font-size: 18px;
+        color: #222222;
+        font-style: italic;
+        margin: 0;
+      }
+
+      .profile-info p {
+        color: #9b9b9b;
+        font-size: 14px;
+        font-style: italic;
+        margin: 5px 0 0 0;
+      }
+
+      .section {
+        padding: 20px;
+        font-family: ABeeZee, sans-serif;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .section .title {
+        font-size: 16px;
+        color: #222222;
+        font-style: italic;
+        margin: 0;
+      }
+
+      .section .subtitle {
+        font-size: 11px;
+        color: #9b9b9b;
+        margin: 5px 0 0 0;
+      }
+
+      .icon {
+        position: absolute;
+        right: 15px;
+        top: 25px;
+        font-size: 14px;
+        color: #9b9b9b;
+      }
+
+      .bottom-nav {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: white;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+      }
+
+      .bottom-nav i {
+        color: #9b9b9b;
+        font-size: 24px;
+      }
+
+      .bottom-nav .active i {
+        color: #1a283c;
+      }
+
+      .bottom-nav span {
+        font-family: ABeeZee, sans-serif;
+        font-size: 10px;
+        display: block;
+        margin-top: 5px;
+      }
+
+      .bottom-nav .active span {
+        color: #1a283c;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">My Profile</div>
+
+      <!-- Profile Section -->
+      <div class="profile-section">
+        <div class="profile-image"></div>
+        <div class="profile-info">
+          <h2>USER NAME</h2>
+          <p>username123@gmail.com</p>
+        </div>
+      </div>
+
+      <!-- My Orders -->
+      <div class="section">
+        <button onclick="window.location.href='myorder.html'">
+          <span class="title">My Orders</span>
+        </button>
+        <span class="subtitle">Already have 12 orders</span>
+        <i class="fas fa-chevron-right icon"></i>
+      </div>
+
+      <!-- Shipping Addresses -->
+      <div class="section">
+        <button onclick="window.location.href='addshippingaddress.html'">
+          <span class="title">Shipping addresses</span>
+        </button>
+        <span class="subtitle">3 addresses</span>
+        <i class="fas fa-chevron-right icon"></i>
+      </div>
+
+      <!-- Payment Methods -->
+      <div class="section">
+        <button onclick="window.location.href='paymentcards.html'">
+          <span class="title">Payment methods</span>
+        </button>
+        <span class="subtitle">Visa **34</span>
+        <i class="fas fa-chevron-right icon"></i>
+      </div>
+
+      <!-- My Reviews -->
+      <div class="section">
+        <button><span class="title">My Reviews</span></button>
+        <span class="subtitle">Reviews for 4 items</span>
+        <i class="fas fa-chevron-right icon"></i>
+      </div>
+
+      <!-- Settings -->
+      <div class="section">
+        <button><span class="title">Settings</span></button>
+        <span class="subtitle">Notifications, password</span>
+        <i class="fas fa-chevron-right icon"></i>
+      </div>
+
+      <!-- Bottom Navigation -->
+      <div class="bottom-nav">
+        <div>
+          <button onclick="window.location.href='mainpage.html'">
+            <i class="fas fa-home"></i>
+          </button>
+          <span>Home</span>
+        </div>
+        <div>
+          <button onclick="window.location.href='main2.html'">
+            <i class="fas fa-store"></i>
+          </button>
+          <span>Shop</span>
+        </div>
+        <div>
+          <button onclick="window.location.href='mybag.html'">
+            <i class="fas fa-shopping-bag"></i>
+          </button>
+          <span>Bag</span>
+        </div>
+        <div>
+          <button onclick="window.location.href='categories.html'">
+            <i class="fas fa-search"></i>
+          </button>
+          <span>Search</span>
+        </div>
+        <div class="active">
+          <button onclick="window.location.href='myprofile.html'">
+            <i class="fas fa-user"></i>
+          </button>
+          <span>Profile</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

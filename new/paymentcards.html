@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>paymentcards</title>
+    <link rel="stylesheet" href="./paymentcards.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=ABeeZee:ital,wght@0,400;1,400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="payment-cards">
+      <div class="navigation-barheadline">
+        <div class="bg"></div>
+        <div class="status-bar-on-light"></div>
+        <div class="left-action">
+          <i class="headline">Payment methods</i>
+        </div>
+      </div>
+      <div class="headline1">
+        <i class="head">Your payment cards</i>
+      </div>
+      <img class="card-icon" alt="" src="./images/atm.png" />
+
+      <img class="addinactive-icon" alt="" src="Add/inactive.svg" />
+
+      <div class="add-new-card">
+        <div class="bg1"></div>
+
+        <!-- Name on Card -->
+        <div class="text-fieldordinaryinactive">
+          <label for="name-on-card" class="input-label">Name on Card</label>
+          <input
+            type="text"
+            id="name-on-card"
+            class="input-field"
+            placeholder="Name on Card"
+          />
+          <span id="name-error" class="error-message"></span>
+        </div>
+
+        <!-- Card Number -->
+        <div class="text-fieldordinaryfocused">
+          <label for="card-number" class="input-label">Card Number</label>
+          <input
+            type="text"
+            id="card-number"
+            class="input-field"
+            placeholder="Enter card number"
+          />
+          <span id="card-error" class="error-message"></span>
+        </div>
+
+        <!-- Expiry Date -->
+        <div class="text-fieldordinaryfocused1">
+          <label for="expiry-date" class="input-label">Expire Date</label>
+          <input
+            type="text"
+            id="expiry-date"
+            class="input-field"
+            placeholder="MM/YYYY"
+          />
+          <span id="expiry-error" class="error-message"></span>
+        </div>
+
+        <!-- CVV -->
+        <div class="text-fieldordinaryfocused2">
+          <label for="cvv" class="input-label">CVV</label>
+          <input
+            type="text"
+            id="cvv"
+            class="input-field"
+            placeholder="CVV"
+          />
+          <span id="cvv-error" class="error-message"></span>
+        </div>
+
+        <i class="headline2">Add new card</i>
+
+        <!-- Add Card Button -->
+        <button id="add-card-btn" class="buttonprimaryinactivebig">ADD CARD</button>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("add-card-btn").addEventListener("click", function (e) {
+        e.preventDefault();
+        const name = document.getElementById("name-on-card").value.trim();
+        const cardNumber = document.getElementById("card-number").value.trim();
+        const expiryDate = document.getElementById("expiry-date").value.trim();
+        const cvv = document.getElementById("cvv").value.trim();
+
+        let isValid = true;
+
+        // Validate Name on Card
+        if (!name) {
+          document.getElementById("name-error").textContent = "Name on card is required";
+          isValid = false;
+        } else {
+          document.getElementById("name-error").textContent = "";
+        }
+
+        // Validate Card Number (16 digits)
+        if (!/^\d{16}$/.test(cardNumber)) {
+          document.getElementById("card-error").textContent = "Card number must be 16 digits";
+          isValid = false;
+        } else {
+          document.getElementById("card-error").textContent = "";
+        }
+
+        // Validate Expiry Date (MM/YYYY format)
+        if (!/^(0[1-9]|1[0-2])\/\d{4}$/.test(expiryDate)) {
+          document.getElementById("expiry-error").textContent = "Expiry date must be in MM/YYYY format";
+          isValid = false;
+        } else {
+          document.getElementById("expiry-error").textContent = "";
+        }
+
+        // Validate CVV (3 or 4 digits)
+        if (!/^\d{3,4}$/.test(cvv)) {
+          document.getElementById("cvv-error").textContent = "CVV must be 3 or 4 digits";
+          isValid = false;
+        } else {
+          document.getElementById("cvv-error").textContent = "";
+        }
+
+        // Proceed to next page if valid
+        if (isValid) {
+          window.location.href = "addshippingaddress.html";
+        }
+      });
+    </script>
+  </body>
+</html>

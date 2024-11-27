@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'ABeeZee', sans-serif;
+        }
+
+        body {
+            background-color: #F9F9F9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(./images/bg1.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .container {
+            width: 375px;
+            background-color: #F9F9F9;
+            position: relative;
+        }
+
+        .header {
+            position: relative;
+            padding: 20px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-family: 'Adamina', serif;
+            font-size: 25px;
+            color: #222222;
+        }
+
+        .form {
+            padding: 0 16px;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 11px;
+            color: #9B9B9B;
+            margin-bottom: 5px;
+        }
+
+        .input {
+            width: 100%;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+            border: none;
+            font-size: 14px;
+            color: #2D2D2D;
+        }
+
+        .signup-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #1A283C;
+            color: #fff;
+            font-size: 14px;
+            font-style: italic;
+            border: none;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .existing-account {
+            text-align: right;
+            font-size: 14px;
+            color: #222;
+            font-style: italic;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Sign up</h1>
+        </div>
+
+        <div class="form">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Your Username" class="input" required>
+                <small class="error-message" id="usernameError"></small>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="input" placeholder="Password" required>
+                <small class="error-message" id="passwordError"></small>
+            </div>
+
+            <button id="signupBtn" class="signup-btn">SIGN UP</button>
+
+            <div class="existing-account">
+                <button onclick="window.location.href='login.html'"><span>Already have an account?</span></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signupBtn').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Clear previous error messages
+            document.getElementById('usernameError').textContent = '';
+            document.getElementById('passwordError').textContent = '';
+
+            // Get form values
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            let isValid = true;
+
+            // Username validation
+            if (username === '') {
+                document.getElementById('usernameError').textContent = 'Username is required.';
+                isValid = false;
+            }
+
+            // Password validation
+            const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+            if (password === '') {
+                document.getElementById('passwordError').textContent = 'Password is required.';
+                isValid = false;
+            } else if (!passwordPattern.test(password)) {
+                document.getElementById('passwordError').textContent = 'Password must be at least 8 characters long and contain at least one letter and one number.';
+                isValid = false;
+            }
+
+            // If all fields are valid, submit the form
+            if (isValid) {
+                // Prepare data for submission
+                const data = {
+                    username: username,
+                    password: password
+                };
+
+                // Send data to the back-end
+                fetch('http://localhost:5000/auth/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        return response.json().then(err => { throw new Error(err.msg); });
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    alert(data.msg); // Show success message
+                    window.location.href = 'login.html'; // Redirect to login page
+                })
+                .catch(error => {
+                    alert(error.message); // Show error message
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+.big-banner-icon {
+  position: absolute;
+  top: 0px;
+  left: 650px;
+  width: 416px;
+  height: 536px;
+  object-fit: cover;
+}
+.rectangle {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 415%;
+  box-shadow: 0px 4px 8px rgba(211, 38, 38, 0.25);
+  border-radius: 25px;
+  background-color: #1a283c;
+}
+.check {
+  position: absolute;
+  top: 22.22%;
+  left: 451.13%;
+  line-height: 20px;
+}
+.buttonprimaryinactivesmall {
+  position: absolute;
+  top: 468px;
+  left: 10px;
+  width: 160px;
+  height: 36px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+}
+.title {
+  position: absolute;
+  top: 0px;
+  left: 1%;
+  font-size: 34px;
+  color: #222;
+}
+.subtitle {
+  position: absolute;
+  top: 38px;
+  left: 1%;
+  font-size: 12px;
+}
+.subtitle1 {
+  position: relative;
+  top: 19px;
+  left: 13.69%;
+  color: #222;
+}
+.photo-icon {
+  position: absolute;
+  height: 70.77%;
+  width: 98.67%;
+  top: 0%;
+  right: 0.67%;
+  bottom: 29.23%;
+  left: 1.33%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+  border-radius: 29px;
+  background-color: #222;
+}
+.new {
+  position: absolute;
+  top: calc(50% - 5px);
+  left: calc(50% - 15px);
+  display: inline-block;
+  width: 29px;
+}
+.new-label {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  width: 40px;
+  height: 24px;
+  text-align: center;
+  color: #fff;
+}
+.number {
+  position: absolute;
+  top: calc(50% - 3px);
+  left: 78px;
+  line-height: 8px;
+}
+.starinactive-icon {
+  position: absolute;
+  top: calc(50% - 7px);
+  left: calc(50% - 48.5px);
+  width: 14px;
+  height: 14px;
+}
+.starinactive-icon1 {
+  position: absolute;
+  top: calc(50% - 7px);
+  left: calc(50% - 33.5px);
+  width: 14px;
+  height: 14px;
+}
+.starinactive-icon2 {
+  position: absolute;
+  top: calc(50% - 7px);
+  left: calc(50% - 18.5px);
+  width: 14px;
+  height: 14px;
+}
+.starinactive-icon3 {
+  position: absolute;
+  top: calc(50% - 7px);
+  left: calc(50% - 3.5px);
+  width: 14px;
+  height: 14px;
+}
+.starinactive-icon4 {
+  position: absolute;
+  top: calc(50% - 7px);
+  left: calc(50% + 11.5px);
+  width: 14px;
+  height: 14px;
+}
+.rating-no-points {
+  position: absolute;
+  top: 189px;
+  left: 0px;
+  width: 89px;
+  height: 12px;
+  overflow: hidden;
+  font-size: 10px;
+}
+.add-to-favorite-buttoninactiv {
+  position: absolute;
+  height: 13.85%;
+  width: 24%;
+  top: 63.08%;
+  right: 0%;
+  bottom: 23.08%;
+  left: 76%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: contain;
+}
+.new-price {
+  position: absolute;
+  top: 94.62%;
+  left: 1.33%;
+  font-size: 14px;
+  line-height: 20px;
+  color: #222;
+}
+.item {
+  position: absolute;
+  top: 85.77%;
+  left: 0.67%;
+  font-size: 16px;
+  color: #222;
+}
+.brand-name {
+  position: absolute;
+  top: 80%;
+  left: 0.67%;
+}
+.product-card-new {
+  position: absolute;
+  top: 71px;
+  left: 0px;
+  width: 150px;
+  height: 260px;
+}
+.photo-icon1 {
+  position: absolute;
+  height: 70.77%;
+  width: 98.67%;
+  top: 0%;
+  right: 0.67%;
+  bottom: 29.23%;
+  left: 0.67%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.starinactive-icon5 {
+  position: absolute;
+  top: calc(50% - 7px);
+  left: calc(50% - 49px);
+  width: 35px;
+  height: 18px;
+}
+.starinactive-icon6 {
+  position: absolute;
+  top: calc(50% - 7px);
+  left: calc(50% - 34px);
+  width: 14px;
+  height: 14px;
+}
+.starinactive-icon7 {
+  position: absolute;
+  top: calc(50% - 7px);
+  left: calc(50% - 19px);
+  width: 14px;
+  height: 14px;
+}
+.starinactive-icon8 {
+  position: absolute;
+  top: calc(50% - 7px);
+  left: calc(50% - 4px);
+  width: 14px;
+  height: 14px;
+}
+.starinactive-icon9 {
+  position: absolute;
+  top: calc(50% - 7px);
+  left: calc(50% + 11px);
+  width: 14px;
+  height: 14px;
+}
+.rating-no-points1 {
+  position: absolute;
+  top: 191px;
+  left: 0px;
+  width: 100px;
+  height: 14px;
+  overflow: hidden;
+  font-size: 10px;
+}
+.add-to-favorite-buttoninactiv1 {
+  position: absolute;
+  height: 13.85%;
+  width: 24%;
+  top: 63.08%;
+  right: 0.67%;
+  bottom: 23.08%;
+  left: 75.33%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: contain;
+}
+.item1 {
+  position: absolute;
+  top: 87.31%;
+  left: 0.67%;
+  font-size: 16px;
+  color: #222;
+}
+.brand-name1 {
+  position: absolute;
+  top: 81.15%;
+  left: 0.67%;
+}
+.product-cardnewmain {
+  position: absolute;
+  top: 71px;
+  left: 166px;
+  width: 150px;
+  height: 260px;
+}
+.product-cardnewmain1 {
+  position: absolute;
+  top: 71px;
+  left: 332px;
+  width: 150px;
+  height: 260px;
+}
+.blocknew {
+  position: absolute;
+  width: 162.53%;
+  top: 540px;
+  right: -32.27%;
+  left: 36.73%;
+  height: 331px;
+  font-size: 11px;
+}
+
+.home {
+  margin: 0;
+}
+.home-kitchen-container {
+  position: absolute;
+  top: 350px;
+  left: 660px;
+  font-size: 48px;
+  color: #fff;
+}
+
+.profile-iconinactive {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.label {
+  position: absolute;
+  top: 32px;
+  left: 0px;
+}
+.tab-5-my-profile {
+  position: absolute;
+  top: 0px;
+  left: 291px;
+  width: 31px;
+  height: 44px;
+  cursor: pointer;
+}
+.label1 {
+  position: absolute;
+  top: 32px;
+  left: 5px;
+}
+.shopping-bag-iconinactive {
+  position: absolute;
+  height: 68.18%;
+  width: 100%;
+  top: 0%;
+  right: 0%;
+  bottom: 31.82%;
+  left: 0%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+
+.label2 {
+  position: absolute;
+  top: 32px;
+  left: 2px;
+}
+
+.label3 {
+  position: absolute;
+  top: 32px;
+  left: 1px;
+}
+.home-iconactivated {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.vector-icon {
+  position: absolute;
+  height: 2.96%;
+  width: 5.87%;
+  top: 91.26%;
+  right: 28%;
+  bottom: 5.79%;
+  left: 66.13%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  cursor: pointer;
+}
+.label4 {
+  position: absolute;
+  top: 770px;
+  left: 248px;
+}
+.main-page {
+  width: 100%;
+  position: relative;
+  background-image: url("./images/bg1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 958px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 10px;
+  color: #9b9b9b;
+  font-family: ABeeZee;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 28.5%;
+  background: #ffffff;
+  box-shadow: 0px -1px 24px rgba(0, 0, 0, 0.12);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  left: 36.75%;
+  z-index: 1000;
+}
+
+.bottom-nav div {
+  text-align: center;
+  color: #222222;
+  font-size: 10px; /* Adjusted font size */
+}
+
+.bottom-nav i {
+  color: #9b9b9b;
+  font-size: 24px;
+}
+
+.bottom-nav .active i {
+  color: #1a283c;
+}
+
+.bottom-nav span {
+  display: block;
+  margin-top: 5px;
+}
+
+.bottom-nav .active span {
+  color: #1a283c;
+}

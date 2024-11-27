@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="./checkout.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=ABeeZee:ital,wght@0,400;1,400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="my-bagcheckout">
+        <div class="navigation-barheadline">
+          <div class="bg"></div>
+          <div class="left-action">
+            <i class="headline">Checkout</i>
+          </div>
+        </div>
+        <div class="shipping-address">
+          <i class="head">Shipping address</i>
+          <div class="address">
+            <div class="bg1"></div>
+            <div class="address1">
+              <p class="newbridge-court">User Addressline 1</p>
+              <p class="newbridge-court">User Addressline 2</p>
+            </div>
+            <i class="name">User Name</i>
+            <i class="change" id="changeText">Change</i>
+          </div>
+        </div>
+        <div class="payment" id="paymentContainer">
+          <i class="head1">Payment</i>
+          <div class="card-number">**** **** **** 3947</div>
+          <i class="change1">Change</i>
+          <img class="card-icon" alt="" src="./images/image.png" />
+        </div>
+        <div class="delivery-method">
+          <i class="head2">Delivery method</i>
+          <div class="dhl">
+            <div class="bg2"></div>
+            <img class="dhl-icon" alt="" src="./images/dhl.png" />
+            <div class="days">2-3 days</div>
+          </div>
+          <div class="fedex">
+            <div class="bg3"></div>
+            <img class="fedex-icon" alt="" src="./images/fedex1.png" />
+            <div class="days">2-3 days</div>
+          </div>
+          <div class="usps">
+            <div class="bg3"></div>
+            <div class="days">2-3 days</div>
+            <img class="usps-icon" alt="" src="./images/usps.png" />
+          </div>
+        </div>
+        <div class="sums">
+          <div class="order-sum">
+            <i class="order">Order:</i>
+            <i class="price">112$</i>
+          </div>
+          <div class="delivery-sum">
+            <i class="order">Delivery:</i>
+            <i class="price1">15$</i>
+          </div>
+          <div class="summary">
+            <i class="summary1">Summary:</i>
+            <i class="price2">127$</i>
+          </div>
+        </div>
+        <div class="buttonprimaryinactivebig" id="buttonPrimaryInactiveBigContainer">
+          <a href="paymentcards.html"><div class="rectangle"></div></a>
+          <i class="submit-order">SUBMIT ORDER</i>
+        </div>
+      </div>
+    </div>
+    <script>
+      var icon = document.getElementById("icon");
+      if (icon) {
+        icon.addEventListener("click", function (e) {
+          // Add your code here
+        });
+      }
+
+      var changeText = document.getElementById("changeText");
+      if (changeText) {
+        changeText.addEventListener("click", function (e) {
+          // Add your code here
+        });
+      }
+
+      var paymentContainer = document.getElementById("paymentContainer");
+      if (paymentContainer) {
+        paymentContainer.addEventListener("click", function (e) {
+          // Add your code here
+        });
+      }
+
+      var buttonPrimaryInactiveBigContainer = document.getElementById(
+        "buttonPrimaryInactiveBigContainer"
+      );
+      if (buttonPrimaryInactiveBigContainer) {
+        buttonPrimaryInactiveBigContainer.addEventListener(
+          "click",
+          function (e) {
+            // Add your code here
+          }
+        );
+      }
+    </script>
+  </body>
+</html>

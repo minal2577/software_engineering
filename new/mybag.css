@@ -1,0 +1,184 @@
+/* General Styles */
+body {
+  margin: 0;
+  line-height: normal;
+  font-family: ABeeZee, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Main Container */
+.my-bag {
+  width: 100%;
+  max-width: 800px; /* Set a max-width for better layout */
+  margin: 0 auto; /* Center the container */
+  padding: 15px; /* Padding for spacing */
+}
+
+/* Headline */
+.navigation-barbig-headline {
+  text-align: center;
+  margin-bottom: 15px; /* Margin for spacing */
+}
+
+.headline {
+  font-size: 64px; /* Doubled font size */
+}
+
+/* Product Cards */
+.product-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between cards */
+}
+
+.product-cardbag {
+  width: 100%; /* Full width within the container */
+  height: auto; /* Auto height for flexibility */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+  padding: 10px; /* Padding for card content */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Product Details */
+.product-name {
+  font-size: 36px; /* Doubled font size */
+  color: #222;
+}
+
+.price2 {
+  font-size: 28px; /* Doubled font size */
+  color: #555;
+}
+
+/* Quantity Controls */
+.number-of-items {
+  display: flex;
+  align-items: center;
+}
+
+.icon2 {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 8px; /* Padding for button */
+  cursor: pointer;
+  font-size: 28px; /* Doubled font size */
+}
+
+.icon2:hover {
+  background-color: #0056b3; /* Hover effect */
+}
+
+.i1 {
+  margin: 0 6px; /* Margin for spacing */
+  font-size: 32px; /* Doubled font size */
+}
+
+/* Price Section */
+.price {
+  text-align: right;
+  font-size: 32px; /* Doubled font size */
+  margin-top: 10px; /* Margin for spacing */
+}
+
+/* Total Amount */
+.total-amount {
+  font-size: 28px; /* Doubled font size */
+  color: black;
+}
+
+/* Checkout Button */
+.buttonprimaryinactivebig {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a283c;
+  color: #fff;
+  border-radius: 8px;
+  height: 80px; /* Increased height for button */
+  cursor: pointer;
+  margin-top: 15px; /* Margin for spacing */
+}
+
+/* Checkout Text */
+.check-out {
+  font-size: 36px; /* Doubled font size */
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: fixed; /* Fixed at the bottom */
+  bottom: 0;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0; /* Padding for navigation */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.bottom-nav i {
+  color: #9b9b9b;
+  font-size: 44px; /* Doubled icon size */
+}
+
+.bottom-nav .active i {
+  color: #1a283c; /* Active icon color */
+}
+
+.bottom-nav span {
+  font-family: ABeeZee, sans-serif;
+  font-size: 20px; /* Doubled label size */
+  display: block;
+  margin-top: 2px; /* Margin for spacing */
+}
+
+.bottom-nav .active span {
+  color: #1a283c; /* Active label color */
+}
+
+/* Empty Cart Message */
+.empty-cart {
+  text-align: center;
+  font-size: 32px; /* Doubled empty cart text size */
+  color: #999;
+  margin-top: 10px; /* Margin for spacing */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .my-bag {
+      padding: 10px; /* Reduced padding for smaller screens */
+  }
+
+  .headline {
+      font-size: 56px; /* Adjusted font size for smaller screens */
+  }
+
+  .product-cardbag {
+      flex-direction: column; /* Stack items on smaller screens */
+      padding: 8px; /* Reduced padding for cards */
+  }
+
+  .buttonprimaryinactivebig {
+      height: 72px; /* Reduced height for button */
+  }
+
+  .bottom-nav {
+      padding: 8px 0; /* Reduced padding for navigation */
+  }
+
+  .bottom-nav i {
+      font-size: 40px; /* Adjusted icon size */
+  }
+
+  .bottom-nav span {
+      font-size: 16px; /* Adjusted label size */
+  }
+}
