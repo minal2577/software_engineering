@@ -26,7 +26,7 @@ app.register_blueprint(payment_bp, url_prefix='/payment_process')
 @app.route('/')
 def home():
     return "MongoDB connected successfully!"
-    @app.route('/')
+@app.route('/')
 def serve_homepage():
     return render_template('index.html')
 @app.route('/<path:filename>')
