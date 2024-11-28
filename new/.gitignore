@@ -1,0 +1,15 @@
+# Common
+*.log                # Log files
+*.env                # Environment variables
+.DS_Store            # macOS-specific file
+*.bak                # Backup files
+node_modules/        # Node.js dependencies
+.vscode/             # VS Code settings
+
+# Python (Backend)
+__pycache__/         # Compiled Python files
+*.py[cod]            # Compiled Python files
+
+# React/Frontend
+build/               # Build output for React
+dist/                # Build output for other JS frameworks
