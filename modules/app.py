@@ -4,11 +4,11 @@ from flask_jwt_extended import JWTManager
 from flask_cors import CORS
 from dotenv import load_dotenv
 import os
-from auth import auth_bp
-from shipping import address_bp
-from search import products_bp
-from cart import cart_bp
-from payment import payment_bp
+from modules.auth import auth_bp
+from modules.shipping import address_bp
+from modules.search import products_bp
+from modules.cart import cart_bp
+from modules.payment import payment_bp
 load_dotenv()  # Load environment variables from .env file
 
 app = Flask(__name__)
