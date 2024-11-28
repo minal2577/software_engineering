@@ -3,34 +3,46 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 20px; /* Adds spacing at the top of the categories section */
+  margin-top: 20px;
+  padding: 0 20px; /* Adds some horizontal padding */
 }
 
 button {
-  margin-bottom: 10px; /* Adds space between buttons */
-  background-color: transparent;
+  background: none;
   border: none;
+  padding: 0;
   cursor: pointer;
+  width: 100%;
 }
 
 /* Styling for the clickable buttons (Energy Drinks, Coffee Products, Household Essentials) */
 .clickable-buttons {
   display: flex;
   flex-direction: column; /* Makes the buttons stack vertically */
-  align-items: center; /* Centers the buttons horizontally */
-  margin-bottom: 20px; /* Adds space below the clickable buttons */
+  align-items: stretch; /* Ensures buttons take up full width */
+  margin-bottom: 20px;
 }
 
 .energy-essentials,
 .coffee-essentials,
 .household-essentials {
-  padding: 10px;
-  font-size: 16px;
+  padding: 15px 20px;
+  font-size: 18px;
   text-align: center;
-  background-color: #f0f0f0;
-  border-radius: 5px;
-  width: 80%; /* Controls the width of the buttons */
-  margin: 5px 0;
+  background-color: #1a283c;
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 10px; /* Adds spacing between buttons */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.energy-essentials:hover,
+.coffee-essentials:hover,
+.household-essentials:hover {
+  transform: translateY(-2px); /* Adds hover lift effect */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Other category section styles */
@@ -43,30 +55,41 @@ button {
 .baby-products,
 .groceries-essentials {
   font-size: 16px;
-  padding: 10px;
-  background-color: #f0f0f0;
-  border-radius: 5px;
+  padding: 10px 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
   width: 100%;
   margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 /* Styling for lines for visual appeal */
-.line, .line1, .line2, .line3, .line4, .line5, .line6, .line7, .line8, .line9 {
+.line,
+.line1,
+.line2,
+.line3,
+.line4,
+.line5,
+.line6,
+.line7,
+.line8,
+.line9 {
   border-bottom: 1px solid #ddd;
   margin: 5px 0;
 }
 
+/* Bottom navigation bar styles */
 .bottom-nav {
   position: absolute;
   bottom: 0;
-  width: 23%;
+  width: 100%;
   background: white;
   display: flex;
   justify-content: space-around;
   padding: 10px 0;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  left: 38%;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .bottom-nav i {
@@ -89,6 +112,7 @@ button {
   color: #1a283c;
 }
 
+/* Navigation bar headline */
 .navigation-barheadline {
   position: absolute;
   top: 0;
@@ -130,13 +154,14 @@ button {
   color: #333;
 }
 
-/* Other necessary styling */
+/* General body and container styles */
 body {
   font-family: ABeeZee, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f4f4f9;
 }
 
 .container {
-  padding-bottom: 70px; /* Space for the fixed bottom navigation */
+  padding-bottom: 70px;
 }
