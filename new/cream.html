@@ -49,7 +49,7 @@
         <div class="group">
             <div class="button-container">
                 <button onclick="addToCart()" class="add-to-cart">ADD TO CART</button>
-                <button class="ar-navigation">AR NAVIGATION</button>
+                 <button class="ar-navigation" onclick="navigateToAR()">AR NAVIGATION</button>
             </div>
         </div>
 
@@ -85,6 +85,10 @@
                     alert(`Error: ${errorData.msg}`);
                 }
             }
+            function navigateToAR() {
+        window.location.href = 'https://singular-medovik-9b3e47.netlify.app/';
+    }
+
         </script>
     </div>
 </body>
