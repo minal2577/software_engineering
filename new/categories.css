@@ -1,89 +1,74 @@
-/* General Styles */
-body {
-  margin: 0;
-  line-height: normal;
-  font-family: ABeeZee, sans-serif;
-  background-color: #f9f9f9;
+/* General container styles for the categories */
+.cnt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px; /* Adds spacing at the top of the categories section */
 }
 
-/* Base Category Styles */
-.categories-2 {
-  width: 100%;
-  height: 100vh;
-  background-color: #f9f9f9;
-  background-image: url("./images/bg1.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  text-align: left;
-  font-size: 10px;
-  color: #9b9b9b;
+button {
+  margin-bottom: 10px; /* Adds space between buttons */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-/* Layout Containers */
-.tabbar, .bottom-nav, .buttonprimaryinactivebig {
-  width: 100%;
-  box-sizing: border-box;
+/* Styling for the clickable buttons (Energy Drinks, Coffee Products, Household Essentials) */
+.clickable-buttons {
+  display: flex;
+  flex-direction: column; /* Makes the buttons stack vertically */
+  align-items: center; /* Centers the buttons horizontally */
+  margin-bottom: 20px; /* Adds space below the clickable buttons */
 }
 
-/* Tabbar */
-.tabbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #fff;
-  border-radius: 12px 12px 0 0;
-  z-index: 10;
+.energy-essentials,
+.coffee-essentials,
+.household-essentials {
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  width: 80%; /* Controls the width of the buttons */
+  margin: 5px 0;
 }
 
-/* Category Items */
-.choose-category,
+/* Other category section styles */
 .personal-care,
 .health-wellness,
 .home-kitchen,
 .electronics-accessories,
 .clothing-apparel,
-.toys-games,
 .stationery,
 .baby-products,
-.pet-supplies,
-.household-essentials,
-.energy-essentials,
-.coffee-essentials,
 .groceries-essentials {
   font-size: 16px;
-  line-height: 20px;
-  cursor: pointer;
-  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
-/* Button Styling */
-.buttonprimaryinactivebig {
-  height: 48px;
-  background-color: #1a283c;
-  color: white;
-  text-align: center;
-  font-size: 14px;
-  cursor: pointer;
-  border-radius: 6px;
-  margin: 0 auto 20px;
+/* Styling for lines for visual appeal */
+.line, .line1, .line2, .line3, .line4, .line5, .line6, .line7, .line8, .line9 {
+  border-bottom: 1px solid #ddd;
+  margin: 5px 0;
 }
 
-/* Bottom Navigation */
 .bottom-nav {
-  position: fixed;
+  position: absolute;
   bottom: 0;
+  width: 23%;
+  background: white;
   display: flex;
   justify-content: space-around;
-  background-color: white;
-  padding: 10px;
-  border-radius: 12px 12px 0 0;
-  z-index: 20;
+  padding: 10px 0;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  left: 38%;
 }
 
-/* Bottom Nav Icon Styles */
 .bottom-nav i {
   color: #9b9b9b;
   font-size: 24px;
@@ -94,6 +79,7 @@ body {
 }
 
 .bottom-nav span {
+  font-family: ABeeZee, sans-serif;
   font-size: 10px;
   display: block;
   margin-top: 5px;
@@ -103,148 +89,54 @@ body {
   color: #1a283c;
 }
 
-/* Lines (Separators) */
-.line, .line1, .line2, .line3, .line4, .line5, .line6, .line7, .line8, .line9 {
-  border-top: 0.4px solid #9b9b9b;
-  opacity: 0.25;
+.navigation-barheadline {
+  position: absolute;
+  top: 0;
   width: 100%;
-  margin: 10px 0;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px 0;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Flex Alignment for Centering */
-.flex-center {
+.view-all-items {
+  text-align: center;
+  font-size: 16px;
+  color: #1a283c;
+  cursor: pointer;
+}
+
+.buttonprimaryinactivebig {
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin-bottom: 20px;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 1024px) {
-  .categories-2 {
-    padding: 20px;
-    font-size: 14px;
-  }
-
-  .choose-category,
-  .personal-care,
-  .health-wellness,
-  .home-kitchen,
-  .electronics-accessories,
-  .clothing-apparel,
-  .toys-games,
-  .stationery,
-  .baby-products,
-  .pet-supplies,
-  .household-essentials,
-  .energy-essentials,
-  .coffee-essentials,
-  .groceries-essentials {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-
-  .buttonprimaryinactivebig {
-    width: 90%;
-    font-size: 12px;
-  }
-
-  .bottom-nav {
-    bottom: 10px;
-    padding: 8px;
-  }
-
-  .bottom-nav i {
-    font-size: 20px;
-  }
-
-  .bottom-nav span {
-    font-size: 8px;
-  }
+.rectangle {
+  padding: 12px;
+  width: 80%;
+  background-color: #1a283c;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
-  .tabbar {
-    position: relative;
-    border-radius: 0;
-    box-shadow: none;
-  }
-
-  .headline {
-    font-size: 14px;
-  }
-
-  .choose-category,
-  .personal-care,
-  .health-wellness,
-  .home-kitchen,
-  .electronics-accessories,
-  .clothing-apparel,
-  .toys-games,
-  .stationery,
-  .baby-products,
-  .pet-supplies,
-  .household-essentials,
-  .energy-essentials,
-  .coffee-essentials,
-  .groceries-essentials {
-    font-size: 12px;
-    margin-bottom: 8px;
-  }
-
-  .buttonprimaryinactivebig {
-    font-size: 12px;
-    width: 100%;
-  }
-
-  .bottom-nav i {
-    font-size: 20px;
-  }
-
-  .bottom-nav span {
-    font-size: 8px;
-  }
+.choose-category {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-@media screen and (max-width: 480px) {
-  .categories-2 {
-    padding: 10px;
-    font-size: 12px;
-  }
-
-  .choose-category,
-  .personal-care,
-  .health-wellness,
-  .home-kitchen,
-  .electronics-accessories,
-  .clothing-apparel,
-  .toys-games,
-  .stationery,
-  .baby-products,
-  .pet-supplies,
-  .household-essentials,
-  .energy-essentials,
-  .coffee-essentials,
-  .groceries-essentials {
-    font-size: 10px;
-    margin-bottom: 6px;
-  }
-
-  .buttonprimaryinactivebig {
-    font-size: 10px;
-    width: 100%;
-  }
-
-  .bottom-nav {
-    bottom: 0;
-    padding: 6px;
-  }
-
-  .bottom-nav i {
-    font-size: 18px;
-  }
-
-  .bottom-nav span {
-    font-size: 6px;
-  }
+/* Other necessary styling */
+body {
+  font-family: ABeeZee, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
+.container {
+  padding-bottom: 70px; /* Space for the fixed bottom navigation */
+}
