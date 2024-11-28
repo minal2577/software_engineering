@@ -26,6 +26,8 @@ app.register_blueprint(payment_bp, url_prefix='/payment_process')
 @app.route('/')
 def home():
     return "MongoDB connected successfully!"
-
+@app.route('/<path:filename>')
+def serve_static_files(filename):
+    return send_from_directory('new', filename)
 if __name__ == '__main__':
     app.run(debug=True)
