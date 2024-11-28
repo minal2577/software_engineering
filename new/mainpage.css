@@ -7,11 +7,8 @@ body {
 
 .main-page {
     width: 100%;
-    background-image: url("./images/bg1.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     padding: 20px; /* Add some padding */
+    box-sizing: border-box; /* Include padding in width calculations */
 }
 
 .container {
@@ -22,14 +19,14 @@ body {
 
 .big-banner-icon {
     width: 100%; /* Full width */
-    max-width: 416px; /* Max width for larger screens */
+    max-width: 400px; /* Adjust max width */
     height: auto; /* Maintain aspect ratio */
     margin-bottom: 20px; /* Space below the banner */
 }
 
 .rectangle {
     width: 100%;
-    max-width: 416px; /* Max width for larger screens */
+    max-width: 400px; /* Adjust max width */
     box-shadow: 0px 4px 8px rgba(211, 38, 38, 0.25);
     border-radius: 25px;
     background-color: #1a283c;
@@ -38,64 +35,88 @@ body {
 }
 
 .title {
-    font-size: 28px; /* Title size */
+    font-size: 24px; /* Title size */
     color: #222;
     margin: 10px 0; /* Margin for spacing */
+    text-align: center;
 }
 
 .subtitle {
     font-size: 12px; /* Subtitle size */
-}
-
-.buttonprimaryinactivesmall {
-    width: 100%; /* Full width */
-    max-width: 160px; /* Max width for the button */
-    height: 36px;
     text-align: center;
-    font-size: 14px;
-    color: #fff;
-    background-color: #1a283c; /* Background color for button */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
 }
 
 .product-list {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping of product cards */
-    justify-content: center; /* Center product cards */
+    flex-direction: column; /* Stack products vertically */
+    align-items: flex-start; /* Align products to the left */
     margin-top: 20px; /* Space above product list */
+    gap: 15px; /* Add space between product rows */
 }
 
 .product-card-new {
-    width: 150px; /* Fixed width for product cards */
-    margin: 10px; /* Space between cards */
-    text-align: center; /* Center text in cards */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    width: 100%; /* Full width */
+    max-width: 300px; /* Limit maximum width for better readability */
     background-color: #fff; /* Background color for cards */
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
     border-radius: 10px; /* Rounded corners */
-    padding: 10px; /* Padding inside cards */
+    padding: 15px; /* Padding inside cards */
+    box-sizing: border-box; /* Include padding in dimensions */
 }
 
 .photo-icon {
     width: 100%; /* Full width for images */
+    max-width: 150px; /* Set maximum width */
     height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure image fits within container */
+    border-radius: 5px; /* Optional rounded corners */
+    margin-bottom: 10px; /* Add spacing below the image */
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    text-align: center; /* Center align text */
+    gap: 5px; /* Space between text */
 }
 
 .item {
-    font-size: 14px; /* Item name size */
+    font-size: 16px; /* Item name size */
     color: #222; /* Item name color */
+    font-weight: bold; /* Bold for emphasis */
 }
 
 .brand-name {
-    font-size: 12px; /* Brand name size */
+    font-size: 14px; /* Brand name size */
     color: #777; /* Brand name color */
 }
 
 .new-price {
-    font-size: 16px; /* Price size */
+    font-size: 18px; /* Price size */
     color: #1a283c; /* Price color */
-    font-weight: bold; /* Bold price */
+    font-weight: bold; /* Bold for emphasis */
+}
+
+/* Checkbox Alignment */
+.checkbox-label {
+    display: flex;
+    align-items: center; /* Align checkbox with text */
+    gap: 5px; /* Space between checkbox and label */
+    font-size: 14px;
+    color: #222;
+    margin: 5px 0; /* Space around each checkbox */
+}
+
+/* Section Titles (e.g., "HOME & KITCHEN") */
+.section-title {
+    font-size: 18px;
+    color: #1a283c;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 /* Bottom Navigation Styles */
@@ -116,11 +137,11 @@ body {
     flex: 1; /* Allow items to grow and fill space */
     text-align: center; /* Center text */
     color: #222222; /* Text color */
-    font-size: 10px; /* Font size */
+    font-size: 12px; /* Adjust font size */
 }
 
 .nav-item i {
-    font-size: 24px; /* Icon size */
+    font-size: 26px; /* Increased icon size */
     color: #9b9b9b; /* Default icon color */
 }
 
@@ -139,13 +160,21 @@ body {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    .nav-item {
-        font-size: 12px; /* Adjust font size for mobile */
+    .product-card-new {
+        max-width: 90%; /* Adjust card width for smaller screens */
+    }
+
+    .photo-icon {
+        max-width: 100px; /* Adjust image size */
     }
 }
 
 @media (max-width: 480px) {
-    .nav-item {
-        font-size: 10px; /* Further reduce font size for smaller screens */
+    .product-card-new {
+        width: 100%; /* Full width for small screens */
+    }
+
+    .photo-icon {
+        max-width: 80px; /* Adjust image size */
     }
 }
